@@ -1,5 +1,7 @@
 # Process::Path
 
+[![Gem Version](https://badge.fury.io/rb/process-path.svg)](https://badge.fury.io/rb/process-path)
+
 Process::Path is a small library to get the path of the currently running process.
 
 ## Installation
