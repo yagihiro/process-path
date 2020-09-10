@@ -20,7 +20,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'process/path'
+
+Process::Path.path
+#=> "/Users/yourname/.rbenv/versions/2.7.1/bin/ruby"
+```
 
 ## Development
 
@@ -33,8 +38,8 @@ which will create a git tag for the version, push git commits and tags, and push
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/process-path.
-This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/process-path/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/yagihiro/process-path.
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/yagihiro/process-path/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## License
@@ -43,4 +48,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Process::Path project's code bases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/process-path/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Process::Path project's code bases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/yagihiro/process-path/blob/master/CODE_OF_CONDUCT.md).
