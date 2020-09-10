@@ -1,6 +1,7 @@
 # Process::Path
 
 [![Gem Version](https://badge.fury.io/rb/process-path.svg)](https://badge.fury.io/rb/process-path)
+![Ruby](https://github.com/yagihiro/process-path/workflows/Ruby/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/39b1c2e07668d7354cdb/maintainability)](https://codeclimate.com/github/yagihiro/process-path/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/39b1c2e07668d7354cdb/test_coverage)](https://codeclimate.com/github/yagihiro/process-path/test_coverage)
 
