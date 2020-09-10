@@ -3,5 +3,8 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in process-path.gemspec
 gemspec
 
-gem "rake", "~> 12.0"
-gem "rspec", "~> 3.0"
+gem 'pry'
+gem 'rake', require: false
+gem 'rspec'
+gem 'rubocop', require: false
+gem 'simplecov', '~> 0.17.0', require: false
