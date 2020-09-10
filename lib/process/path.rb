@@ -1,4 +1,6 @@
-require "process/path/version"
+# frozen_string_literal: true
+
+require 'process/path/version'
 
 module Process
   module Path
