@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = 'Process::Path is a small library to get the path of the currently running process.'
   spec.homepage      = 'https://github.com/yagihiro/process-path'
   spec.license       = 'MIT'
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.6.0')
+  spec.required_ruby_version = Gem::Requirement.new('>= 2.7.0')
   spec.metadata['homepage_uri'] = spec.homepage
 
   # Specify which files should be added to the gem when it is released.
