@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    process-path (0.1.1)
+    process-path (0.1.2)
 
 GEM
   remote: https://rubygems.org/
