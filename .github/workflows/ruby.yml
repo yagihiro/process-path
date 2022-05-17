@@ -9,9 +9,8 @@ name: Ruby
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
 
 jobs:
   test:
@@ -19,23 +18,23 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu, macos]
-        ruby: [2.7.3, 3.0.1]
+        ruby: [2.7, 3.0.4, 3.1]  # Explicitly specifying 3.0.4 because specifying 3.0 will cause 3.1.2 to be used
     runs-on: ${{ matrix.os }}-latest
     steps:
     - uses: actions/checkout@v3
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
-    - name: Setup Code Climate test-reporter
-      if: ${{ matrix.os == 'ubuntu' && matrix.ruby == '2.6' }}
-      run: |
-        curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-        chmod +x ./cc-test-reporter
-        ./cc-test-reporter before-build
+#    - name: Setup Code Climate test-reporter
+#      if: ${{ matrix.os == 'ubuntu' && matrix.ruby == '2.7' }}
+#      run: |
+#        curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+#        chmod +x ./cc-test-reporter
+#        ./cc-test-reporter before-build
     - run: bundle install --jobs 4 --retry 3
     - run: bundle exec rake
-    - name: Publish code coverage
-      if: ${{ matrix.os == 'ubuntu' && matrix.ruby == '2.6' }}
-      run: |
-        export GIT_BRANCH="${GITHUB_REF/refs\/heads\//}"
-        ./cc-test-reporter after-build -r ${{secrets.CC_TEST_REPORTER_ID}}
+#    - name: Publish code coverage
+#      if: ${{ matrix.os == 'ubuntu' && matrix.ruby == '2.7' }}
+#      run: |
+#        export GIT_BRANCH="${GITHUB_REF/refs\/heads\//}"
+#        ./cc-test-reporter after-build -r ${{secrets.CC_TEST_REPORTER_ID}}
