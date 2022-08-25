@@ -25,16 +25,6 @@ jobs:
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
-#    - name: Setup Code Climate test-reporter
-#      if: ${{ matrix.os == 'ubuntu' && matrix.ruby == '2.7' }}
-#      run: |
-#        curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-#        chmod +x ./cc-test-reporter
-#        ./cc-test-reporter before-build
-    - run: bundle install --jobs 4 --retry 3
+        bundler-cache: true
+    - run: bundle install --jobs 2 --retry 3
     - run: bundle exec rake
-#    - name: Publish code coverage
-#      if: ${{ matrix.os == 'ubuntu' && matrix.ruby == '2.7' }}
-#      run: |
-#        export GIT_BRANCH="${GITHUB_REF/refs\/heads\//}"
-#        ./cc-test-reporter after-build -r ${{secrets.CC_TEST_REPORTER_ID}}
