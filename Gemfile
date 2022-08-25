@@ -9,5 +9,5 @@ gem 'panolint', require: false
 gem 'pry'
 gem 'rake', require: false
 gem 'rspec'
-gem 'rubocop', '~> 1.17', require: false
-gem 'simplecov', '~> 0.21.0', require: false
+gem 'rubocop', require: false
+gem 'simplecov', require: false
