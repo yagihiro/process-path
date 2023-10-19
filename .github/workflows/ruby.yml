@@ -21,7 +21,7 @@ jobs:
         ruby: [2.7, 3.0.4, 3.1]  # Explicitly specifying 3.0.4 because specifying 3.0 will cause 3.1.2 to be used
     runs-on: ${{ matrix.os }}-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
