@@ -18,7 +18,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu, macos]
-        ruby: [2.7, 3.0.4, 3.1]  # Explicitly specifying 3.0.4 because specifying 3.0 will cause 3.1.2 to be used
+        ruby: [3.2, 3.3]
     runs-on: ${{ matrix.os }}-latest
     steps:
     - uses: actions/checkout@v4
